@@ -1,0 +1,18 @@
+valor=0
+
+def bubble(arr):
+	aux=arr[:]
+	global valor 
+	for i in range(len(arr)):
+		for j in range(0,len(arr)-i-1):
+			if(aux[j]>aux[j+1]):
+				aux[j],aux[j+1]=aux[j+1],aux[j]
+				valor+=1
+	return aux
+
+import random 
+p= random.sample(range(0,200),100)
+print(p)
+psorted=bubble(p)
+print(valor)
+print(psorted)
